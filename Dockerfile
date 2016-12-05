@@ -12,7 +12,7 @@ RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /e
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 RUN apt-get update -qq
 
-RUN apt-get install -qqy imagemagick nodejs lftp ansible > /dev/null 2>&1 && \
+RUN apt-get install -qqy imagemagick nodejs lftp ansible jq curl > /dev/null 2>&1 && \
     npm install -g bower > /dev/null 2>&1 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
