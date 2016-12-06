@@ -1,7 +1,8 @@
 VERSION?=latest
+HUB?=mrcr
 
 build:
-	docker build -t mrcr/ruby-npm:${VERSION} .
+	docker build -t ${HUB}/ruby-npm:${VERSION} .
 
 push:
-	docker push mrcr/ruby-npm:${VERSION}
+	docker push ${HUB}/ruby-npm:${VERSION}
