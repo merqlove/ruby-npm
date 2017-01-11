@@ -13,7 +13,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
 RUN apt-get update -qq
 
 RUN apt-get install -qqy imagemagick nodejs lftp ansible jq curl > /dev/null 2>&1 && \
-    npm install -g bower phantomjs > /dev/null 2>&1 && \
+    npm install -g bower phantomjs-prebuilt geckodriver > /dev/null 2>&1 && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 WORKDIR /
