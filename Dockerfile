@@ -1,4 +1,4 @@
-FROM ruby:2.3.3
+FROM ruby:2.4.1
 MAINTAINER Alexander Merkulov @merqlove
 
 RUN apt-get update -qq > /dev/null 2>&1
